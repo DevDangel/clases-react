@@ -1,0 +1,9 @@
+.inicio{
+    background-image: url('https://www.buk.co/hubfs/imagenes-preview-web-co-buk.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    max-height: 88.1vh;
+    height: 100vh;
+}
