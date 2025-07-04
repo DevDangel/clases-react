@@ -1,0 +1,288 @@
+
+:root{
+    --color-titulos: #2F4DAA;
+    --color-img: #E6EDFE;
+}
+/* --- PRIMERA PARTE VIDEO Y PARRAFO ---*/
+.frame{
+    width: 100%;
+    max-height: 50vh;
+    height: auto;
+    margin-top: 5%;
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+}
+.frame iframe{
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgb(71, 71, 71);
+}
+.frame-Text{
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.frame-title h2{
+    color: var(--color-titulos);
+    font-size: 35px;
+}
+.frame-list{
+    width: 100%;
+    height: auto;
+    margin-top: 5%;
+}
+.custom-bullets {
+  list-style: none;
+}
+.custom-bullets li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.custom-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  background-image: url('../imgs/flecha.png'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: scale(2);
+}
+.frame-list button{
+    margin-top: 5%;
+    border:none;
+    width: 30%;
+    height: 5vh;
+    border-radius: 100px; /*    180deg */
+    background: linear-gradient(to bottom, #FBBA3A,#F8A42C);
+}
+.frame-list button a{
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffff;
+    text-decoration: none;
+}
+.frame-list button:hover{
+    background: linear-gradient(to bottom, #e5ab36,#ec6301);;
+}
+/** animaciones **/
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+/*--------------------------------------------*/
+/*---------------Title header ----------------*/
+/*---------------MERO TITULO XD ----------------*/
+.content-header{
+    width: 100%;
+    max-height: 200vh;
+    height: 152vh;
+    background-color: #2F4DAA ;
+    margin-top: 10%;
+}
+.title-header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 100px;
+    gap: 10%;
+}
+.titulo{
+    width: auto;
+    height: 10vh;
+}
+.titulo h1{
+    color: #ffff;
+    font-size: 60px;
+}
+.titulo span{
+    color: #FBBF3D;
+}
+.parrafo{
+    width: 80%;
+    height: auto;
+}
+.parrafo p{
+    font-size: 25px;
+    color: #ffff;
+    text-align: center;
+}
+/*--------------------------------------------*/
+/*-----------------MAIN CONTENT--------------*/
+/*-----------------DIV PLATAFORMA--------------*/
+.main-content{
+    position: relative;
+    width: 90%;
+    max-height: 150vh;
+    height: 113vh;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ffff;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.402);
+    gap: 50px;
+}
+.plataforma{
+    position: relative;
+    margin-top: 5%;
+    padding: 15px;
+    width: 96%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-color: #ffff;
+    border-radius: 20px;
+}
+.plataforma a{
+    font-size: 35px;
+    text-decoration: none;
+    color: var(--color-titulos);
+    padding: 10px;
+    font-weight: 500;
+}
+.plataforma a::after{
+    content: '>';
+    font-size: 30px;
+    font-weight: bold;
+}
+.plataforma a:hover{
+    text-decoration:underline;
+}
+/*--------------------------------------------*/
+/*----------- LOS TRES DIVS XD --------------*/
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 30px;
+    gap: 20px;
+}
+.group{
+    position: relative;
+    background-color:var(--color-img);
+    width: 100%;
+    height: 85vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.group.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.group img{
+    position: relative;
+    margin-left: 40%;
+    margin-top: 5%;
+}
+.beneficio-img{
+    width: 90px !important;
+    margin-top: 7% !important;
+}
+.admin-img{
+    margin-top: 7% !important;
+}
+
+.texto{
+    position: relative;
+    margin-top: 5%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+}
+.texto h3{
+    color: var(--color-titulos);
+    font-size: 25px;
+    font-weight: 500;
+}
+.texto p{
+    font-weight: 490;
+    font-size: 18px;
+}
+
+.lista{
+    position: relative;
+    margin-top: 10%;
+    width: 100%;
+    height: auto;
+
+}
+.lista ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 10%;
+    list-style: none;
+    font-size: 20px;
+    color: var(--color-titulos);
+}
+.lista #line{
+    width: 90%;
+    height: 2px;
+    background-color: #b4bfd9;
+}
+.lista li a{
+    text-decoration: none;
+    color: var(--color-titulos);
+}
+.lista li a:hover{
+    text-decoration:underline;
+}
+.lista li a::after {
+  content: ">";
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s ease, right 0.3s ease;
+  color: var(--color-titulos);
+  right: 100%;
+}
+
+.lista li a:hover::after {
+  opacity: 1;
+  right: 50px;
+}
